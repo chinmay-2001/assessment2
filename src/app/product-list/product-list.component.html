@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr class="header">
+          <th scope="col">Id</th>
+          <th scope="col">Product</th>
+          <th scope="col">Price</th>
+          <th scope="col">Add to Cart</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products" class="center-row">
+          <td>{{ product.id }}</td>
+          <td>{{ product.productName }}</td>
+          <td>{{ product.price }}</td>
+          <td><button (click)="add.emit(product.id)" data-test="add-button" class="btn btn-primary">Add to Cart</button></td>
+        </tr>
+      </tbody>
+    </table>
+    
+</div>
