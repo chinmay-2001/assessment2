@@ -1,6 +1,6 @@
 import { Component ,Output, Input, EventEmitter} from '@angular/core';
 import { product } from '../model/product.model';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-collection',
@@ -10,4 +10,11 @@ import { product } from '../model/product.model';
 export class ProductCollectionComponent {
   @Input() products:ReadonlyArray<product> =[]
   @Output() remove= new EventEmitter<string>()
+
+  constructor(private router:Router){}
+
+  onClick(){
+    this.router.navigate(['productlist'])
+    
+  }
 }

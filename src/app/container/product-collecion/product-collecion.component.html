@@ -1,0 +1,2 @@
+<h2 style="text-align: center;">My Cart</h2>
+<app-product-collection class="product-collection" [products]="(productCollection$ | async)!" (remove)="onRemove($event)"></app-product-collection>

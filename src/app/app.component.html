@@ -1,6 +1,7 @@
-<h2 style="text-align: center;">Products</h2>
+<!-- <h2 style="text-align: center;">Products</h2>
 <app-product-list [products]="(product$ | async)!" (add)="onAdd($event)"></app-product-list>
 
-
+<button (click)="onClick()">Cart</button>
 <h2 style="text-align: center;">My Cart</h2>
-<app-product-collection class="product-collection" [products]="(productCollection$ | async)!" (remove)="onRemove($event)"></app-product-collection>
+<app-product-collection class="product-collection" [products]="(productCollection$ | async)!" (remove)="onRemove($event)"></app-product-collection> -->
+<router-outlet></router-outlet>
